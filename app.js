@@ -43,8 +43,7 @@ Vue.component("table-products", {
                 </tr>
             </tbody>
         </table>
-    </div>
-`
+    </div>`
 });
 
 var app = new Vue({
