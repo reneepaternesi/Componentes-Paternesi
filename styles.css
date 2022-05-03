@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Raleway:wght@100&display=swap');
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.content {
+    z-index: 2;
+    position: relative;
+}
+
+.title {
+    background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+    text-align: center;
+    line-height: 100px ;
+    margin: 0 auto;
+    display: block;
+    color: white;
+}
+
+.store-hero-wrapper {
+    text-align: center;
+    line-height: 100px;
+}
+
+.store-hero-wrapper .store-name, .store-hero-wrapper .store-address{
+    display: inline-block;
+    
+}
+
+/* font styles */
+.table {
+    color: #212529;
+    background-color: gray;
+}
+
+.table .thead-dark th {
+    background-color: gray;
+    border-color: #212529;
+}
+
+.sienna-font .table{
+    color: sienna;
+}
+
+.crimson-font .table{
+    color: crimson;
+}
+
+.blue-font .table{
+    color: #09009f;
+}
+
+.burly-mode .table{
+    background-color: burlywood;
+}
+
+/* table styles */
+.burly-mode .table .thead-dark th {
+    background-color: sienna;
+    border-color: burlywood;
+}
+
+.light-mode .table{
+    background-color: lightpink;
+}
+
+.light-mode .table .thead-dark th {
+    background-color: crimson;
+    border-color: lightpink;
+}
+
+.blue-mode .table{
+    background-color: lightskyblue;
+}
+
+.blue-mode .table .thead-dark th {
+    background-color: #09009f;
+    border-color: lightskyblue;
+}
+
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+}
+
+#bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
