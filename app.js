@@ -36,10 +36,12 @@ Vue.component("table-products", {
             </thead>
             <tbody>
                 <tr v-for="(entry, i) in entries" :key="i">
-                    <th v-for="(row, r) in entry" :key="r">
-                    <span  v-if="r!==3">{{row}}</span>
-                    <img v-if="r===3" :src="row" width="60" height="60"/>
-                    </th>
+                    <td>{{entry.id}}</td>
+                    <td>{{entry.name}}</td>
+                    <td>{{entry.cantidad}}</td>
+                    <td>
+                        <img :src="entry.IMAG" width="60" height="60"/>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -57,10 +59,30 @@ var app = new Vue({
                 stock: {
                     titles: ["ID", "Producto", "Cantidad", "PreView"],
                     entries: [
-                        [1, "Notebook HP", 20, "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/V/8VW01LA-1_T1615590539.png"],
-                        [2, "Notebook Lenovo", 40, "https://cdn.shopify.com/s/files/1/0511/7499/8190/products/Notebook-Lenovo-V15-Amd-Ryzen-5-15-Win10-pos-1@2x.jpg?v=1646335165"],
-                        [3, "Tablet Samsung", 15, "https://images.samsung.com/is/image/samsung/ar-galaxy-taba-t290-sm-t290nzkaaro-frontblack-172109528?$2160_1728_PNG$"],
-                        [4, "Teléfono Samsung", 25, "https://images.samsung.com/is/image/samsung/assets/latin/2203/galaxy-a-series/04_Product_list_A53_5g_mo.png?$FB_TYPE_J_F_MO_PNG$"],
+                        {
+                            id: 1,
+                            name: "Notebook HP",
+                            cantidad: 20,
+                            imag: "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/V/8VW01LA-1_T1615590539.png"
+                        },
+                        {
+                            id: 2,
+                            name: "Notebook Lenovo",
+                            cantidad: 40,
+                            imag: "https://cdn.shopify.com/s/files/1/0511/7499/8190/products/Notebook-Lenovo-V15-Amd-Ryzen-5-15-Win10-pos-1@2x.jpg?v=1646335165"
+                        },
+                        {
+                            id: 3,
+                            name: "Tablet Samsung",
+                            cantidad: 15,
+                            imag: "https://images.samsung.com/is/image/samsung/ar-galaxy-taba-t290-sm-t290nzkaaro-frontblack-172109528?$2160_1728_PNG$"
+                        },
+                        {
+                            id: 4,
+                            name: "Teléfono Samsung",
+                            cantidad: 25,
+                            imag: "https://images.samsung.com/is/image/samsung/assets/latin/2203/galaxy-a-series/04_Product_list_A53_5g_mo.png?$FB_TYPE_J_F_MO_PNG$"
+                        }
                     ],
                 },
                 stylesObject: { 'crimson-font': true, 'light-mode': true },
@@ -72,10 +94,30 @@ var app = new Vue({
                 stock: {
                     titles: ["ID", "Producto", "Cantidad", "PreView"],
                     entries: [
-                        [5, "Notebook Mac", 20, "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/V/8VW01LA-1_T1615590539.png"],
-                        [6, "Notebook MacBook", 40, "https://media.gq.com.mx/photos/5f21719a737a9d2e88e6dc7a/2:3/w_1332,h_1998,c_limit/MAC.jpg"],
-                        [7, "Teléfono Iphone11", 15, "https://www.macstation.com.ar/img/productos/small/1680-1111.jpg"],
-                        [8, "Teléfono Iphone13", 25, "https://www.apple.com/newsroom/images/product/iphone/geo/Apple_HowToBuy_iPhone-13_GEO_09162021_carousel.jpg.large.jpg"],
+                        {
+                            id: 5,
+                            name: "Notebook Mac",
+                            cantidad: 20,
+                            imag: "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/V/8VW01LA-1_T1615590539.png"
+                        },
+                        {
+                            id: 6,
+                            name: "Notebook MacBook",
+                            cantidad: 40,
+                            imag: "https://media.gq.com.mx/photos/5f21719a737a9d2e88e6dc7a/2:3/w_1332,h_1998,c_limit/MAC.jpg"
+                        },
+                        {
+                            id: 7,
+                            name: "Teléfono Iphone11",
+                            cantidad: 15,
+                            imag: "https://www.macstation.com.ar/img/productos/small/1680-1111.jpg"
+                        },
+                        {
+                            id: 8,
+                            name: "Teléfono Iphone13",
+                            cantidad: 25,
+                            imag: "https://www.apple.com/newsroom/images/product/iphone/geo/Apple_HowToBuy_iPhone-13_GEO_09162021_carousel.jpg.large.jpg"
+                        },
                     ]
                 },
                 stylesObject: { 'sienna-font': true, 'burly-mode': true },
@@ -87,10 +129,30 @@ var app = new Vue({
                 stock: {
                     titles: ["ID", "Producto", "Cantidad", "PreView"],
                     entries: [
-                        [2, "Notebook Lenovo", 40, "https://cdn.shopify.com/s/files/1/0511/7499/8190/products/Notebook-Lenovo-V15-Amd-Ryzen-5-15-Win10-pos-1@2x.jpg?v=1646335165"],
-                        [5, "Notebook Mac", 20, "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/V/8VW01LA-1_T1615590539.png"],
-                        [6, "Notebook MacBook", 40, "https://media.gq.com.mx/photos/5f21719a737a9d2e88e6dc7a/2:3/w_1332,h_1998,c_limit/MAC.jpg"],
-                        [3, "Tablet Samsung", 15, "https://images.samsung.com/is/image/samsung/ar-galaxy-taba-t290-sm-t290nzkaaro-frontblack-172109528?$2160_1728_PNG$"],
+                        {
+                            id: 2,
+                            name: "Notebook Lenovo",
+                            cantidad: 40,
+                            imag: "https://cdn.shopify.com/s/files/1/0511/7499/8190/products/Notebook-Lenovo-V15-Amd-Ryzen-5-15-Win10-pos-1@2x.jpg?v=1646335165"
+                        },
+                        {
+                            id: 5,
+                            name: "Notebook Mac",
+                            cantidad: 20,
+                            imag: "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/V/8VW01LA-1_T1615590539.png"
+                        },
+                        {
+                            id: 6,
+                            name: "Notebook MacBook",
+                            cantidad: 40,
+                            imag: "https://media.gq.com.mx/photos/5f21719a737a9d2e88e6dc7a/2:3/w_1332,h_1998,c_limit/MAC.jpg"
+                        },
+                        {
+                            id: 3,
+                            name: "Tablet Samsung",
+                            cantidad: 15,
+                            imag: "https://images.samsung.com/is/image/samsung/ar-galaxy-taba-t290-sm-t290nzkaaro-frontblack-172109528?$2160_1728_PNG$"
+                        },
                     ]
                 },
                 stylesObject: { 'blue-font': true, 'blue-mode': true },
